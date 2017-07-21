@@ -30,7 +30,7 @@ namespace N_Puzzle_Game
             ch_nd.y = y;
             ch_nd.state = state;
             ch_nd.level = parent.level + 1;
-            ch_nd.cost = get_cost(state) + (int)Math.Sqrt(ch_nd.level);
+            ch_nd.cost = get_cost(state) + (int)Math.Log(ch_nd.level);
             ch_nd.parent = parent;
             return ch_nd;
         }
@@ -64,16 +64,12 @@ namespace N_Puzzle_Game
         private void set_x_y(node root, int[,] c_state)
         {
             for (int i = 0; i < N; i++)
-            {
                 for (int j = 0; j < N; j++)
-                {
                     if (c_state[i, j] == 0)
                     {
                         root.x = j;
                         root.y = i;
                     }
-                }
-            }
         }
 
         private void get_child(int[,] p, node tmp)

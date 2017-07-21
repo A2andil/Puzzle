@@ -13,3 +13,12 @@ C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N P
 C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N Puzzle Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.pdb
 C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.exe
 C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.pdb
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\bin\Debug\N_Puzzle_Game.exe
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\bin\Debug\N_Puzzle_Game.pdb
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.csprojResolveAssemblyReference.cache
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.Eight_Puzzle.resources
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.Properties.Resources.resources
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.Start_Window.resources
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.UserControl_Eigth_Puzzle_Numbers.resources
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.UserControl_Eigth_Puzzle_Pictures.resources
+C:\Users\Ahmad Kandil\Documents\GitHub\Artificial-Intelligence-N-Puzzle-Game\N_Puzzle_Game\obj\Debug\N_Puzzle_Game.csproj.GenerateResource.Cache
