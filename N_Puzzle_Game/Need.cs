@@ -13,8 +13,9 @@ namespace N_Puzzle_Game
 
         public int N { set; get; }
         public int[,] goal;
+        public int[,] initial_state;
 
-        public int[,] get_destination() 
+        public int[,] get_destination()
         {
             int[,] c_state = new int[N, N];
             for (int i = 0; i < N; i++)
@@ -61,6 +62,16 @@ namespace N_Puzzle_Game
         public bool is_safe(int x, int y)
         {
             return x >= 0 && x < N && y >= 0 && y < N;
+        }
+
+        public void set_goal(int[,] c_state)
+        {
+            goal = c_state;
+        }
+
+        public void set_state(int[,] c_state)
+        {
+            initial_state = c_state;
         }
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N_Puzzle_Game
 {
-    class node
+    public class node
     {
         public int level = 0, cost = 0, x = 0, y = 0;
         public int[,] state;

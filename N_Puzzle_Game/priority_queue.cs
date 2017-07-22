@@ -12,8 +12,7 @@ namespace N_Puzzle_Game
 
         void swap(node a, node b, int idx, int small_idx)
         {
-            lst[idx] = b;
-            lst[small_idx] = a;
+            lst[idx] = b; lst[small_idx] = a;
         }
 
         private void minheapify(int idx)
@@ -35,7 +34,7 @@ namespace N_Puzzle_Game
             if (lst.Count > 0)
             {
                 node nd = lst[0];
-                lst[0] = lst[lst.Count - 1];
+                lst[0] = lst[lst.Count - 1]; 
                 lst.RemoveAt(lst.Count - 1);
                 minheapify(0);
                 return nd;

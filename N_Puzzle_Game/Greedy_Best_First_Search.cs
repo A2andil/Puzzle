@@ -18,16 +18,13 @@ namespace N_Puzzle_Game
         public Greedy_Best_First_Search(int tmp)
         {
             N = tmp;
-            goal = get_destination();
-            visited.Clear();
-            solution.Clear();
+            visited.Clear(); solution.Clear();
         }
 
         node get_node(int[,] state, node parent, int x, int y)
         {
             node ch_nd = new node();
-            ch_nd.x = x;
-            ch_nd.y = y;
+            ch_nd.x = x; ch_nd.y = y;
             ch_nd.state = state;
             ch_nd.level = parent.level + 1;
             ch_nd.cost = get_cost(state) + (int)Math.Log(ch_nd.level);
@@ -39,8 +36,7 @@ namespace N_Puzzle_Game
         {
             node root = create_root(c_state);
             str_state = to_string(c_state);
-            states_q.push(root);
-            visited.Add(str_state);
+            states_q.push(root); visited.Add(str_state);
 
             while (!states_q.empty() && !is_goal_state)
             {
@@ -85,10 +81,8 @@ namespace N_Puzzle_Game
                     str_state = to_string(c_state);
                     if (!visited.Contains(str_state))
                     {
-                        node ch_nd = get_node(c_state, tmp,
-                            tmp.x + dx[i], tmp.y + dy[i]);
-                        visited.Add(str_state);
-                        states_q.push(ch_nd);
+                        node ch_nd = get_node(c_state, tmp, tmp.x + dx[i], tmp.y + dy[i]);
+                        visited.Add(str_state); states_q.push(ch_nd);
                         if (is_goal(c_state))
                         {
                             is_goal_state = true;

@@ -23,6 +23,7 @@ namespace N_Puzzle_Game
 
         public bfs(string state)
         {
+            solution.Clear();
             goal = get_goal(state.Length);
             visited = new trie(state.Length);
             bfs_node root = create_node(state, null);

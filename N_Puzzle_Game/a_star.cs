@@ -8,19 +8,25 @@ namespace N_Puzzle_Game
 {
     public class a_star : Need
     {
-        bool is_goal_state = false;
+        public static bool is_goal_state = false;
+        public bool is_in_tread = false, front = false, back = false; 
         string str_state { set; get; }
         public static Stack<string> solution = new Stack<string>();
 
         priority_queue states_q = new priority_queue();
-        public static HashSet<string> visited = new HashSet<string>();
+        HashSet<string> visited = new HashSet<string>();
 
         public a_star(int tmp) 
         {
             N = tmp;
-            goal = get_destination();
-            visited.Clear();
+            is_goal_state = false;
             solution.Clear();
+        }
+
+        public void solve_in_thread() 
+        {
+            is_in_tread = true;
+            solve(initial_state);
         }
 
         node get_node(int[,] state, node parent, int x, int y) 
@@ -28,8 +34,7 @@ namespace N_Puzzle_Game
             node ch_nd = new node();
             ch_nd.state = state;
             ch_nd.level = parent.level + 1;
-            ch_nd.x = x;
-            ch_nd.y = y;
+            ch_nd.x = x; ch_nd.y = y;
             ch_nd.cost = get_cost(state) + (int)Math.Sqrt(ch_nd.level);
             ch_nd.parent = parent;
             return ch_nd;
@@ -39,29 +44,26 @@ namespace N_Puzzle_Game
         {
             node root = create_root(c_state);
             str_state = to_string(c_state);
-            states_q.push(root);
-            visited.Add(str_state);
-
+            states_q.push(root); visited.Add(str_state);
+            if (is_in_tread && front) bidirectional.front_vis.Add(str_state, root);
+            else if (is_in_tread && back) bidirectional.back_vis.Add(str_state, root);
             while (!states_q.empty() && !is_goal_state)
             {
                 node tmp = states_q.pop();
-
-                get_child(tmp.state, tmp);
+                get_child(tmp);
             }
         }
 
-        private node create_root(int[,] c_state)
+        private node create_root(int[,] c_state) 
         {
             node root = new node();
-            root.level = 0;
-            root.state = c_state;
-            root.parent = null;
+            root.state = c_state; root.parent = null;
             root.cost = get_cost(c_state);
             set_x_y(root, c_state);
             return root;
         }
 
-        private void set_x_y(node root, int[,] c_state)
+        private void set_x_y(node root, int[,] c_state) 
         {
             for (int i = 0; i < N; i++)
                 for (int j = 0; j < N; j++)
@@ -72,7 +74,7 @@ namespace N_Puzzle_Game
                     }
         }
 
-        private void get_child(int[,] p, node tmp) 
+        private void get_child(node tmp) 
         {
             for (int i = 0; i < 4 && !is_goal_state; i++)
             {
@@ -83,21 +85,47 @@ namespace N_Puzzle_Game
                     c_state[tmp.y, tmp.x] = c_state[tmp.y + dy[i], tmp.x + dx[i]];
                     c_state[tmp.y + dy[i], tmp.x + dx[i]] = 0;
                     str_state = to_string(c_state);
-                    if (!visited.Contains(str_state))
+                    if (is_in_tread && front)
                     {
-                        node ch_nd = get_node(c_state, tmp,
+                        if (!bidirectional.front_vis.ContainsKey(str_state))
+                        {
+                            node ch_nd = get_node(c_state, tmp,
                             tmp.x + dx[i], tmp.y + dy[i]);
-                        visited.Add(str_state);
-                        states_q.push(ch_nd);
+                            bidirectional.front_vis.Add(str_state, ch_nd);
+                            states_q.push(ch_nd);
+                            if (bidirectional.back_vis.ContainsKey(str_state))
+                            {
+                                is_goal_state = true;
+                                bidirectional.Path(ch_nd);
+                            }
+                        }
+                    }
+                    else if (is_in_tread && back)
+                    {
+                        if (!bidirectional.back_vis.ContainsKey(str_state))
+                        {
+                            node ch_nd = get_node(c_state, tmp, tmp.x + dx[i], tmp.y + dy[i]);
+                            bidirectional.back_vis.Add(str_state, ch_nd);
+                            states_q.push(ch_nd);
+                            if (bidirectional.front_vis.ContainsKey(str_state))
+                            {
+                                is_goal_state = true;
+                                bidirectional.Path(ch_nd);
+                            }
+                        }
+                    }
+                    else if (!visited.Contains(str_state))
+                    {
+                        node ch_nd = get_node(c_state, tmp, tmp.x + dx[i], tmp.y + dy[i]);
+                        visited.Add(str_state); states_q.push(ch_nd);
                         if (is_goal(c_state))
                         {
-                            is_goal_state = true;
-                            node tmp_nd = ch_nd;
+                            node tmp_nd = ch_nd; is_goal_state = true;
                             while (tmp_nd != null)
                             {
                                 solution.Push(to_string(tmp_nd.state));
                                 tmp_nd = tmp_nd.parent;
-                            }          
+                            }
                         }
                     }
                 }

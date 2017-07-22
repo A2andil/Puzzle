@@ -46,11 +46,18 @@
   <ItemGroup>
     <Compile Include="a_star.cs" />
     <Compile Include="bfs.cs" />
+    <Compile Include="bidirectional.cs" />
     <Compile Include="Eight_Puzzle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Eight_Puzzle.Designer.cs">
       <DependentUpon>Eight_Puzzle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fifteen_Puzzle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fifteen_Puzzle.Designer.cs">
+      <DependentUpon>Fifteen_Puzzle.cs</DependentUpon>
     </Compile>
     <Compile Include="Greedy_Best_First_Search.cs" />
     <Compile Include="Need.cs" />
@@ -68,20 +75,23 @@
       <DependentUpon>Start_Window.cs</DependentUpon>
     </Compile>
     <Compile Include="trie.cs" />
-    <Compile Include="UserControl_Eigth_Puzzle_Numbers.cs">
+    <Compile Include="UserControl_Puzzle_Numbers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl_Eigth_Puzzle_Numbers.Designer.cs">
-      <DependentUpon>UserControl_Eigth_Puzzle_Numbers.cs</DependentUpon>
+    <Compile Include="UserControl_Puzzle_Numbers.Designer.cs">
+      <DependentUpon>UserControl_Puzzle_Numbers.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl_Eigth_Puzzle_Pictures.cs">
+    <Compile Include="UserControl_Puzzle_Pictures.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl_Eigth_Puzzle_Pictures.Designer.cs">
-      <DependentUpon>UserControl_Eigth_Puzzle_Pictures.cs</DependentUpon>
+    <Compile Include="UserControl_Puzzle_Pictures.Designer.cs">
+      <DependentUpon>UserControl_Puzzle_Pictures.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Eight_Puzzle.resx">
       <DependentUpon>Eight_Puzzle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fifteen_Puzzle.resx">
+      <DependentUpon>Fifteen_Puzzle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,11 +105,14 @@
     <EmbeddedResource Include="Start_Window.resx">
       <DependentUpon>Start_Window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl_Eigth_Puzzle_Numbers.resx">
-      <DependentUpon>UserControl_Eigth_Puzzle_Numbers.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl_Puzzle_Numbers.resx">
+      <DependentUpon>UserControl_Puzzle_Numbers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl_Eigth_Puzzle_Pictures.resx">
-      <DependentUpon>UserControl_Eigth_Puzzle_Pictures.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl_Puzzle_Pictures.resx">
+      <DependentUpon>UserControl_Puzzle_Pictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Need.resx">
+      <DependentUpon>UserControl_Need.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
