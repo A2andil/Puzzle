@@ -83,8 +83,7 @@ namespace N_Puzzle_Game
                 lst[btn_y / btn_length * N + btn_x / btn_length] = (char)48;
                 state = new string(lst);
                 Point p = new Point(x, y);
-                x = btn_x;
-                y = btn_y;
+                x = btn_x; y = btn_y;
                 btn.Location = p;
                 if (x == (N - 1) * btn_length && y == (N - 1) * btn_length) is_goal();
             }
@@ -147,8 +146,7 @@ namespace N_Puzzle_Game
                 {
                     int tmp_x = btn.Location.X, tmp_y = btn.Location.Y;
                     btn.Location = new Point(x, y);
-                    x = tmp_x;
-                    y = tmp_y;
+                    x = tmp_x; y = tmp_y;
                 }
             }
         }

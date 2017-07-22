@@ -78,8 +78,7 @@ namespace N_Puzzle_Game
                 {
                     int tmp_x = btn.Location.X, tmp_y = btn.Location.Y;
                     btn.Location = new Point(x, y);
-                    x = tmp_x;
-                    y = tmp_y;
+                    x = tmp_x; y = tmp_y;
                 }
             }
         }
@@ -101,8 +100,7 @@ namespace N_Puzzle_Game
                 {
                     if (state[i * N + j] == 48)
                     {
-                        x = j * btn_length;
-                        y = i * btn_length;
+                        x = j * btn_length; y = i * btn_length;
                         continue;
                     }
                     Button btn = create_button(j * btn_length, i * btn_length, btn_length);
@@ -126,8 +124,7 @@ namespace N_Puzzle_Game
                 list[btn_y / btn_length * N + btn_x / btn_length] = '0';
                 state = new string(list);
                 Point p = new Point(x, y);
-                x = btn_x;
-                y = btn_y;
+                x = btn_x; y = btn_y;
                 btn.Location = p;
                 if (x == (N - 1) * btn_length && y == (N - 1) * btn_length) is_goal();
             }
