@@ -1,4 +1,4 @@
-# Artificial Intelligence 8/15 Puzzle Game[see](https://www.youtube.com/watch?v=1DyJ6NtVp3k&t=1s)
+# Artificial Intelligence 8/15 Puzzle Game
 
 ## Alogrithms :
        1. BFS algorithm.
@@ -11,6 +11,8 @@
        3. Stack.
        4. Set.
        5. Dictionary.
+---
+### Link on Youtube [here](https://www.youtube.com/watch?v=1DyJ6NtVp3k&t=1s)
 ---
 ## copyright & license
 copyright © 2017, code released under the [MIT License](LICENSE)
