@@ -1,10 +1,10 @@
 # Artificial Intelligence 8/15 Puzzle Game
 
 ## Alogrithms :
-       1. Breadth first seach algorithm.
-       2. A star algorithm.
-       3. Greedy best first search algorithm.
-       4. Bidirectional search algorithm (meet in middle).
+       1. Breadth first seach.
+       2. A star.
+       3. Greedy best first search.
+       4. Bidirectional search (meet in middle).
 ## Data structures :
        1. Trie.
        2. Priority Queue & Queue.
