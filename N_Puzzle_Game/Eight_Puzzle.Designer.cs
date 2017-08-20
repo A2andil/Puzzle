@@ -144,7 +144,7 @@
             this.Name = "Eight_Puzzle";
             this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Artificial Intelligence | Puzzle Game";
+            this.Text = "Artificial Intelligence 8 Puzzle Game";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Eight_Puzzle_FormClosed);
             this.Load += new System.EventHandler(this.Eight_Puzzle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

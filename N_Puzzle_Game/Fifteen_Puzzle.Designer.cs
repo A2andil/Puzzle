@@ -144,7 +144,7 @@
             this.Name = "Fifteen_Puzzle";
             this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Artificial Intelligence | Puzzle Game";
+            this.Text = "Artificial Intelligence 15 Puzzle Game";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Fifteen_Puzzle_FormClosed);
             this.Load += new System.EventHandler(this.Fifteen_Puzzle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
