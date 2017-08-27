@@ -14,5 +14,5 @@
 ---
 ### Link on Youtube [here](https://www.youtube.com/watch?v=1DyJ6NtVp3k&t=1s)
 ---
-## copyright & license
+## License
 copyright © 2017, code released under the [MIT License](LICENSE)
