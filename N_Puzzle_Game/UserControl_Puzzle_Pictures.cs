@@ -26,10 +26,7 @@ namespace N_Puzzle_Game
             InitializeComponent();
             set(s, n, l);
             if (N == 3)
-            {
-                while (!is_solvable(state = suffle(get_state(N * N))))
-                    state = suffle(state);
-            }
+                while (!is_solvable(state = suffle(get_state(N * N)))) ;
             else if (N == 4)
             {
                 load();
