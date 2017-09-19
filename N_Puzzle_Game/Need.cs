@@ -12,8 +12,7 @@ namespace N_Puzzle_Game
         public int[] dx = { 0, -1, 0, 1 };
 
         public int N { set; get; }
-        public int[,] goal;
-        public int[,] initial_state;
+        public int[,] goal, initial_state;
 
         public int[,] get_destination()
         {

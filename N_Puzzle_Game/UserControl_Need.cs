@@ -19,23 +19,10 @@ namespace N_Puzzle_Game
 
         public void load()
         {
-            try
-            {
-                const Int32 BufferSize = 128;
-                string path
-                    = Path.Combine(Environment.CurrentDirectory, @"Files\", "input4_4.in");
-                using (var fileStream = File.OpenRead(path))
-                using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
-                {
-                    String line;
-                    while ((line = streamReader.ReadLine()) != null)
-                        rand_states.Add(line);
-                }
-            }
-            catch 
-            {
-                MessageBox.Show("invalid path");
-            }
+            string path = @"Files\input4_4.in";
+            var lines = File.ReadLines(path);
+            foreach (var line in lines)
+                rand_states.Add(line.ToString());
         }
 
         public string state { set; get; }
