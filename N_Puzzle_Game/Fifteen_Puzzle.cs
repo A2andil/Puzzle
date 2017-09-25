@@ -32,7 +32,6 @@ namespace N_Puzzle_Game
             if (radioButton1.Checked)
             {
                 panel1.Controls.Clear();
-                bfs.solution.Clear();
                 usdg = new UserControl_Puzzle_Numbers(280, 4, 70);
                 panel1.Controls.Add(usdg);
             }

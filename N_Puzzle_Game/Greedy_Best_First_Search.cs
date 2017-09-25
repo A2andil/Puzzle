@@ -10,7 +10,7 @@ namespace N_Puzzle_Game
     {
         bool is_goal_state = false;
         string str_state { set; get; }
-        public static Stack<string> solution = new Stack<string>();
+        public Stack<string> solution = new Stack<string>();
 
         priority_queue states_q = new priority_queue();
         public static HashSet<string> visited = new HashSet<string>();

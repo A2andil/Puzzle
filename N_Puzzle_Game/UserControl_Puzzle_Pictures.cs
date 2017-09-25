@@ -150,19 +150,19 @@ namespace N_Puzzle_Game
 
         void start_solution(object sender, EventArgs e)
         {
-            if (obj_bfs != null && bfs.solution.Count > 0)
+            if (obj_bfs != null && obj_bfs.solution.Count > 0)
             {
-                state = bfs.solution.Pop();
+                state = obj_bfs.solution.Pop();
                 Draw(state);
             }
-            else if (obj_astar != null && a_star.solution.Count > 0)
+            else if (obj_astar != null && obj_astar.solution.Count > 0)
             {
-                state = a_star.solution.Pop();
+                state = obj_astar.solution.Pop();
                 Draw(state);
             }
-            else if (obj_gbfs != null && Greedy_Best_First_Search.solution.Count > 0)
+            else if (obj_gbfs != null && obj_gbfs.solution.Count > 0)
             {
-                state = Greedy_Best_First_Search.solution.Pop();
+                state = obj_gbfs.solution.Pop();
                 Draw(state);
             }
             else if (obj_bi != null && bidirectional.solution.Count > 0)

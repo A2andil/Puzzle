@@ -18,7 +18,7 @@ namespace N_Puzzle_Game
         string goal { set; get; }
 
         private trie visited;
-        public static Stack<string> solution = new Stack<string>();
+        public Stack<string> solution = new Stack<string>();
         Queue<bfs_node> q = new Queue<bfs_node>();
 
         public bfs(string state)

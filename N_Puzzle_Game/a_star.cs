@@ -11,8 +11,7 @@ namespace N_Puzzle_Game
         public static bool is_goal_state = false;
         public bool is_in_tread = false, front = false, back = false; 
         string str_state { set; get; }
-        public static Stack<string> solution = new Stack<string>();
-
+        public Stack<string> solution = new Stack<string>();
         priority_queue states_q = new priority_queue();
         HashSet<string> visited = new HashSet<string>();
 
