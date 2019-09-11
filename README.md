@@ -2,7 +2,7 @@
 
 ## Alogrithms :
        1. Breadth first seach.
-       2. A star.
+       2. A*.
        3. Greedy best first search.
        4. Bidirectional search (meet in middle).
 ## Data structures :
