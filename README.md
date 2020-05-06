@@ -12,7 +12,7 @@
        4. Set.
        5. Dictionary.
 ---
-### Link on Youtube [here](https://www.youtube.com/watch?v=1DyJ6NtVp3k&t=1s)
+### See Video on Youtube [here](https://www.youtube.com/watch?v=1DyJ6NtVp3k&t=1s)
 ---
 ## License
 copyright © 2017, code released under the [MIT License](LICENSE)
