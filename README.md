@@ -1,6 +1,6 @@
 # Artificial Intelligence 8/15 Puzzle Game
 
-## Alogrithms :
+## Algorithms :
        1. Breadth first seach.
        2. A*.
        3. Greedy best first search.
